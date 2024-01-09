@@ -9,10 +9,6 @@
   mat-form-field {
     width: 100%;
   }
-
-  &.app-multi-input-row {
-    gap: 10px;
-  }
 }
 
 .app-asset-form-header {
@@ -31,4 +27,8 @@
   button {
     flex: 1;
   }
+}
+
+mat-checkbox {
+  margin: -5px 0 0 -10px;
 }

@@ -9,7 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+import { MaxLengthTextPipe } from './pipes/max-length-text.pipe';
+
 import { ErrorPageComponent } from './error-page/error-page.component';
+
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   imports: [
@@ -34,7 +38,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
+    HighlightDirective,
+    MaxLengthTextPipe,
   ],
-  declarations: [ErrorPageComponent],
+  declarations: [ErrorPageComponent, HighlightDirective, MaxLengthTextPipe],
 })
 export class SharedModule {}
