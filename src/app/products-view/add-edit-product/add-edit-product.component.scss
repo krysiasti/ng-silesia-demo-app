@@ -1,0 +1,34 @@
+:host {
+  display: block;
+  padding: 16px;
+}
+
+.app-asset-form-row {
+  display: flex;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  &.app-multi-input-row {
+    gap: 10px;
+  }
+}
+
+.app-asset-form-header {
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+.app-asset-form-content {
+  padding: 8px;
+}
+
+.app-dialog-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    flex: 1;
+  }
+}

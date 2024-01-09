@@ -1,0 +1,44 @@
+.app-card {
+  max-width: 1000px;
+  border: none;
+  box-shadow: none;
+}
+
+.app-card-header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.app-shopping-list-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  .app-shopping-list-title {
+    flex: 1;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  button {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+mat-card-content {
+  mat-card {
+    margin-top: 16px;
+
+    &:nth-child(even) {
+      background-color: #ede7f6;
+    }
+
+    &:nth-child(odd) {
+      background-color: #e8f5e9;
+    }
+  }
+}

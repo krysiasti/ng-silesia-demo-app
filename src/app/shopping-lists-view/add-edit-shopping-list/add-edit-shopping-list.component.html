@@ -1,0 +1,42 @@
+<h2
+  mat-dialog-title
+  class="app-asset-form-header"
+  >Shopping list form</h2
+>
+<form
+  [formGroup]="formGroup"
+  (ngSubmit)="addShoppingList()"
+>
+  <div
+    mat-dialog-content
+    class="app-asset-form-content"
+  >
+    <div class="app-asset-form-row">
+      <mat-form-field class="app-asset-form-row">
+        <mat-label>Shopping list</mat-label>
+        <input
+          matInput
+          formControlName="name"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div
+    mat-dialog-actions
+    class="app-dialog-buttons"
+  >
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      [mat-dialog-close]="false"
+      >Close</button
+    >
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      >{{ data ? "Update" : "Save" }}</button
+    >
+  </div>
+</form>

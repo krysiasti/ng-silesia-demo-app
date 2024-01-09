@@ -1,0 +1,35 @@
+.app-card {
+  max-width: 1000px;
+}
+
+.app-card-header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.app-actions-header {
+  text-align: center;
+}
+
+.app-filter-input {
+  width: 100%;
+}
+
+.app-actions-content {
+  button {
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+  }
+
+  text-align: center;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+.app-no-found-data {
+  padding: 16px;
+}

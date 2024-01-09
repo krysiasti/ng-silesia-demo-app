@@ -1,0 +1,74 @@
+<h2
+  mat-dialog-title
+  class="app-asset-form-header"
+  >Product form</h2
+>
+<form
+  [formGroup]="formGroup"
+  (ngSubmit)="addEditProduct()"
+>
+  <div
+    mat-dialog-content
+    class="app-asset-form-content"
+  >
+    <div class="app-asset-form-row">
+      <mat-form-field class="app-asset-form-row">
+        <mat-label>Product</mat-label>
+        <input
+          matInput
+          formControlName="name"
+        />
+      </mat-form-field>
+    </div>
+    <div class="app-asset-form-row app-multi-input-row">
+      <mat-form-field>
+        <mat-label>Quantity</mat-label>
+        <input
+          matInput
+          type="number"
+          value="1"
+          formControlName="quantity"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Unit</mat-label>
+        <mat-select formControlName="unit">
+          <mat-option
+            *ngFor="let unit of unitsList"
+            [value]="unit"
+          >
+            {{ unit }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="app-asset-form-row">
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          formControlName="description"
+        ></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div
+    mat-dialog-actions
+    class="app-dialog-buttons"
+  >
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      [mat-dialog-close]="false"
+      >Close</button
+    >
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      >{{ data.product ? "Update" : "Save" }}</button
+    >
+  </div>
+</form>

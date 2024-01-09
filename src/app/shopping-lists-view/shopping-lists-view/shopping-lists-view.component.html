@@ -1,0 +1,63 @@
+<mat-card class="app-card">
+  <mat-card-header class="app-card-header">
+    <mat-card-title>Shopping lists</mat-card-title>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="openAddShoppingListForm()"
+      >Add new shopping list</button
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card *ngFor="let list of shoppingLists$ | async">
+      <mat-card-content
+        class="app-shopping-list-content"
+        [routerLink]="['/products', list.id]"
+      >
+        <p class="app-shopping-list-title">{{ list.name }}</p>
+        <button
+          mat-fab
+          color="primary"
+          (click)="openEditProductForm($event, list)"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-fab
+          color="warn"
+          (click)="deleteShoppingList($event, list.id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>
+
+<!-- only added for a chunk verification -->
+<!-- <table
+  mat-table
+  [dataSource]="[]"
+  class="mat-elevation-z8"
+>
+  <ng-container matColumnDef="position">
+    <th
+      mat-header-cell
+      *matHeaderCellDef
+      >No.</th
+    >
+    <td
+      mat-cell
+      *matCellDef="let i = index"
+      >{{ i + 1 }}</td
+    >
+  </ng-container>
+  <tr
+    mat-header-row
+    *matHeaderRowDef="['position']"
+  ></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: ['position']"
+  ></tr>
+</table> -->

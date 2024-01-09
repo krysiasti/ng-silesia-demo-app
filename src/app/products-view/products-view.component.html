@@ -1,0 +1,144 @@
+<mat-card class="app-card">
+  <mat-card-header class="app-card-header">
+    <mat-card-title>Products view</mat-card-title>
+    <button
+      *ngIf="!!shoppingListId"
+      mat-raised-button
+      color="primary"
+      (click)="openAddProductForm()"
+      >Add product</button
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <div class="app-main-body">
+      <mat-form-field class="app-filter-input">
+        <mat-label>Search for a product</mat-label>
+        <input
+          matInput
+          (keyup)="filterProducts($event)"
+          #input
+        />
+      </mat-form-field>
+      <table
+        mat-table
+        matSort
+        [dataSource]="dataSource"
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="position">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            >No.</th
+          >
+          <td
+            mat-cell
+            *matCellDef="let i = index"
+            >{{ i + 1 }}</td
+          >
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            >Name</th
+          >
+          <td
+            mat-cell
+            *matCellDef="let product"
+            >{{ product.name }}</td
+          >
+        </ng-container>
+        <ng-container matColumnDef="quantity">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            >Quantity</th
+          >
+          <td
+            mat-cell
+            *matCellDef="let product"
+            >{{ product.quantity }}</td
+          >
+        </ng-container>
+        <ng-container matColumnDef="unit">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            >Unit</th
+          >
+          <td
+            mat-cell
+            *matCellDef="let product"
+            >{{ product.unit }}</td
+          >
+        </ng-container>
+        <ng-container matColumnDef="description">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            >Description</th
+          >
+          <td
+            mat-cell
+            *matCellDef="let product"
+            >{{ product.description }}</td
+          >
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            class="app-actions-header"
+            >Actions</th
+          >
+          <td
+            mat-cell
+            *matCellDef="let product"
+            class="app-actions-content"
+          >
+            <button
+              mat-fab
+              color="primary"
+              (click)="openEditProductForm(product)"
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button
+              mat-fab
+              color="warn"
+              (click)="deleteProduct(product)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <tr
+          mat-header-row
+          *matHeaderRowDef="displayedColumns"
+        ></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: displayedColumns"
+        ></tr>
+
+        <tr *matNoDataRow>
+          <td
+            colspan="6"
+            class="app-no-found-data"
+            >No products found</td
+          >
+        </tr>
+      </table>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page of products"
+      ></mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>

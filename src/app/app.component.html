@@ -1,0 +1,27 @@
+<mat-toolbar
+  color="primary"
+  class="app-toolbar-container"
+>
+  <span>Shopping lists application => Angular Silesia Meetup</span>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+    class="app-icon-button"
+  >
+    <mat-icon color="white">more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button
+      mat-menu-item
+      routerLink="products"
+      >Products list</button
+    >
+    <button
+      mat-menu-item
+      routerLink="shopping-lists"
+      >Shopping lists</button
+    >
+  </mat-menu>
+</mat-toolbar>
+<router-outlet></router-outlet>

@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "name": "cucumber",
+      "quantity": 3,
+      "unit": "szt",
+      "description": "\n",
+      "id": 1
+    },
+    {
+      "name": "paprika",
+      "quantity": 3,
+      "unit": "szt",
+      "description": "",
+      "id": 3,
+      "listId": 1
+    },
+    {
+      "name": "lemons",
+      "quantity": 5,
+      "unit": "szt",
+      "description": "",
+      "id": 7,
+      "listId": 2
+    },
+    {
+      "name": "eggs",
+      "quantity": 8,
+      "unit": "szt",
+      "description": "\n",
+      "id": 8,
+      "listId": 2
+    },
+    {
+      "name": "asdasdsd",
+      "quantity": 3,
+      "unit": "kg",
+      "description": "",
+      "listId": "1",
+      "id": 9
+    },
+    {
+      "name": "cucumber",
+      "quantity": 3,
+      "unit": "kg",
+      "description": "",
+      "listId": "2",
+      "id": 10
+    }
+  ],
+  "lists": [
+    {
+      "name": "Lidl",
+      "id": 1
+    },
+    {
+      "name": "Biedronka",
+      "id": 2
+    }
+  ]
+}
