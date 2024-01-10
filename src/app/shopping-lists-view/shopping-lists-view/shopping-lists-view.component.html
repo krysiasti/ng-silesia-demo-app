@@ -1,13 +1,7 @@
 <mat-card class="app-card">
-  <mat-card-header class="app-card-header">
-    <mat-card-title>Shopping lists</mat-card-title>
-    <button
-      mat-raised-button
-      color="primary"
-      (click)="openAddShoppingListForm()"
-      >Add new shopping list</button
-    >
-  </mat-card-header>
+  <app-shopping-lists-header
+    (openAddShoppingListForm)="openAddShoppingListForm()"
+  ></app-shopping-lists-header>
   <mat-card-content>
     <mat-card *ngFor="let list of shoppingLists$ | async">
       <mat-card-content

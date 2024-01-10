@@ -12,6 +12,7 @@ import { ProductService } from './shared/service/product.service';
 
 import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
 import { ProductsViewComponent } from './products-view.component';
+import { SnackBarService } from '../shared/service/snackbar.service';
 
 @NgModule({
   declarations: [ProductsViewComponent, AddEditProductComponent],
@@ -24,6 +25,6 @@ import { ProductsViewComponent } from './products-view.component';
     MatPaginatorModule,
     MatSelectModule,
   ],
-  providers: [ProductService],
+  providers: [ProductService, SnackBarService],
 })
 export class ProductsViewModule {}
