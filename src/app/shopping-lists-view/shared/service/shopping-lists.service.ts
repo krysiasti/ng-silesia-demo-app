@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 import { ShoppingList, ShoppingListDto } from '../model/shopping-list.model';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class ShoppingListsService {
   constructor(private _httpClient: HttpClient) {}
 

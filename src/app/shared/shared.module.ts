@@ -9,8 +9,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { SnackBarService } from './service/snackbar.service';
-
 import { MaxLengthTextPipe } from './pipes/max-length-text.pipe';
 
 import { ErrorPageComponent } from './error-page/error-page.component';
@@ -43,7 +41,6 @@ import { HighlightDirective } from './directives/highlight.directive';
     HighlightDirective,
     MaxLengthTextPipe,
   ],
-  providers: [SnackBarService],
   declarations: [ErrorPageComponent, HighlightDirective, MaxLengthTextPipe],
 })
 export class SharedModule {}
