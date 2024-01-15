@@ -19,7 +19,12 @@
     "target": "es2020",
     "module": "es2020",
     "useDefineForClassFields": false,
-    "lib": ["es2020", "dom"]
+    "lib": ["es2020", "dom"],
+    "paths": {
+      "@products": ["src/app/products-view/index.ts"],
+      "@shopping-lists": ["src/app/shopping-lists-view/index.ts"],
+      "@shared": ["src/app/shared/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
