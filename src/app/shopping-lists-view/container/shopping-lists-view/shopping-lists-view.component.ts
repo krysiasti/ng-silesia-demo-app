@@ -1,5 +1,10 @@
+import { NgFor, AsyncPipe } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 import { Observable, Subject, takeUntil } from 'rxjs';
 
@@ -7,6 +12,7 @@ import { SnackBarService } from '../../../shared/service/snackbar.service';
 import { ShoppingListsService } from '../../shared/service/shopping-lists.service';
 
 import { AddEditShoppingListComponent } from '../../components/add-edit-shopping-list/add-edit-shopping-list.component';
+import { ShoppingListsHeaderComponent } from '../../components/shopping-lists-header/shopping-lists-header.component';
 
 import { ShoppingList } from '../../shared/model/shopping-list.model';
 
@@ -14,6 +20,16 @@ import { ShoppingList } from '../../shared/model/shopping-list.model';
   selector: 'app-shopping-lists-view',
   templateUrl: './shopping-lists-view.component.html',
   styleUrls: ['./shopping-lists-view.component.scss'],
+  standalone: true,
+  imports: [
+    MatCardModule,
+    ShoppingListsHeaderComponent,
+    NgFor,
+    RouterLink,
+    MatButtonModule,
+    MatIconModule,
+    AsyncPipe,
+  ],
 })
 export class ShoppingListsViewComponent implements OnInit, OnDestroy {
   shoppingLists$!: Observable<ShoppingList[]>;

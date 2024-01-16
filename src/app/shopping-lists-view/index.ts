@@ -1,1 +1,1 @@
-export { ShoppingListsViewModule } from './shopping-lists-view.module';
+export { ShoppingListsViewComponent } from './container/shopping-lists-view/shopping-lists-view.component';

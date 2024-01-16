@@ -1,6 +1,12 @@
+import { NgFor } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatOptionModule } from '@angular/material/core';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { ActivatedRoute } from '@angular/router';
 
 import { Subject, takeUntil } from 'rxjs';
@@ -14,6 +20,17 @@ import { DialogProductData, Product } from '../../shared/model/product.model';
   selector: 'app-add-edit-product',
   templateUrl: './add-edit-product.component.html',
   styleUrls: ['./add-edit-product.component.scss'],
+  standalone: true,
+  imports: [
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    NgFor,
+    MatOptionModule,
+    MatButtonModule,
+  ],
 })
 export class AddEditProductComponent implements OnInit, OnDestroy {
   formGroup = new FormGroup({

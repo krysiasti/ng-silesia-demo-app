@@ -1,6 +1,9 @@
 import { Component, Inject } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { Subject, takeUntil } from 'rxjs';
 
@@ -13,6 +16,14 @@ import { ShoppingList } from '../../shared/model/shopping-list.model';
   selector: 'app-add-edit-shopping-list',
   templateUrl: './add-edit-shopping-list.component.html',
   styleUrls: ['./add-edit-shopping-list.component.scss'],
+  standalone: true,
+  imports: [
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+  ],
 })
 export class AddEditShoppingListComponent {
   formGroup = new FormGroup({

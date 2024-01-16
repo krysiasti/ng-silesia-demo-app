@@ -1,8 +1,14 @@
+import { NgIf } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { ActivatedRoute, Route } from '@angular/router';
 
 import { Subject, takeUntil, tap } from 'rxjs';
@@ -10,14 +16,31 @@ import { Subject, takeUntil, tap } from 'rxjs';
 import { SnackBarService } from '../../shared/service/snackbar.service';
 import { ProductService } from '../shared/service/product.service';
 
+import { MaxLengthTextPipe } from '../../shared/pipes/max-length-text.pipe';
+
 import { AddEditProductComponent } from '../components/add-edit-product/add-edit-product.component';
 
+import { HighlightDirective } from '../../shared/directives/highlight.directive';
 import { Product } from '../shared/model/product.model';
 
 @Component({
   selector: 'app-products-view',
   templateUrl: './products-view.component.html',
   styleUrls: ['./products-view.component.scss'],
+  standalone: true,
+  imports: [
+    MatCardModule,
+    NgIf,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatSortModule,
+    HighlightDirective,
+    MatIconModule,
+    MatPaginatorModule,
+    MaxLengthTextPipe,
+  ],
 })
 export class ProductsViewComponent {
   dataSource!: MatTableDataSource<Product, MatPaginator>;

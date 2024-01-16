@@ -8,7 +8,7 @@ describe('AddEditProductComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AddEditProductComponent],
+      imports: [AddEditProductComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AddEditProductComponent);

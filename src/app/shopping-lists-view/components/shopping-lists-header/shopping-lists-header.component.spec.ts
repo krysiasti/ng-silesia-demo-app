@@ -8,7 +8,7 @@ describe('ShoppingListsHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ShoppingListsHeaderComponent],
+      imports: [ShoppingListsHeaderComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ShoppingListsHeaderComponent);

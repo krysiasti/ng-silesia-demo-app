@@ -1,1 +1,1 @@
-export { SharedModule } from './shared.module';
+export { SHARED_IMPORTS } from './shared.imports';
