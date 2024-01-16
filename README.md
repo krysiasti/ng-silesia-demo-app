@@ -10,21 +10,19 @@ Run `npm run server` for a backend server. Navigate to `http://localhost:3000` t
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Run bundle analyzer
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run source` for a bundle graph in order to analyze DI and components place in bundles. You can also use `npm run source:result` to export result to the result.json file for a static analysis. **Remember to first build application**.
 
-## Running end-to-end tests
+![Alt bundle analysis graph](image.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Application after standalone migration
+
+Application code after standalone migration can be found on the branch [app-full-standalone](https://github.com/krysiasti/ng-silesia-v16-demo-app/tree/app-full-standalone)
 
 ## Further help
 
