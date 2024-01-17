@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ErrorPageComponent } from '../shared/error-page/error-page.component';
-import { ProductsViewComponent } from './products-view.component';
+import { ProductsViewComponent } from './container/products-view.component';
 
 const routes: Routes = [
   {

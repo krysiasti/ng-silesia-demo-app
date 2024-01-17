@@ -10,8 +10,8 @@ import { ProductsViewRoutingModule } from './products-view.routing.module';
 
 import { ProductService } from './shared/service/product.service';
 
-import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
-import { ProductsViewComponent } from './products-view.component';
+import { AddEditProductComponent } from './components/add-edit-product/add-edit-product.component';
+import { ProductsViewComponent } from './container/products-view.component';
 
 @NgModule({
   declarations: [ProductsViewComponent, AddEditProductComponent],

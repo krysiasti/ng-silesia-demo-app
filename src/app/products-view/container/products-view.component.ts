@@ -7,12 +7,12 @@ import { ActivatedRoute, Route } from '@angular/router';
 
 import { Subject, takeUntil, tap } from 'rxjs';
 
-import { SnackBarService } from '../shared/service/snackbar.service';
-import { ProductService } from './shared/service/product.service';
+import { SnackBarService } from '../../shared/service/snackbar.service';
+import { ProductService } from '../shared/service/product.service';
 
-import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
+import { AddEditProductComponent } from '../components/add-edit-product/add-edit-product.component';
 
-import { Product } from './shared/model/product.model';
+import { Product } from '../shared/model/product.model';
 
 @Component({
   selector: 'app-products-view',

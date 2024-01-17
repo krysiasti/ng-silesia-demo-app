@@ -5,10 +5,10 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Subject, takeUntil } from 'rxjs';
 
-import { SnackBarService } from '../../shared/service/snackbar.service';
-import { ProductService } from '../shared/service/product.service';
+import { SnackBarService } from '../../../shared/service/snackbar.service';
+import { ProductService } from '../../shared/service/product.service';
 
-import { DialogProductData, Product } from '../shared/model/product.model';
+import { DialogProductData, Product } from '../../shared/model/product.model';
 
 @Component({
   selector: 'app-add-edit-product',

@@ -4,10 +4,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 import { Subject, takeUntil } from 'rxjs';
 
-import { SnackBarService } from '../../shared/service/snackbar.service';
-import { ShoppingListsService } from '../shared/service/shopping-lists.service';
+import { SnackBarService } from '../../../shared/service/snackbar.service';
+import { ShoppingListsService } from '../../shared/service/shopping-lists.service';
 
-import { ShoppingList } from '../shared/model/shopping-list.model';
+import { ShoppingList } from '../../shared/model/shopping-list.model';
 
 @Component({
   selector: 'app-add-edit-shopping-list',

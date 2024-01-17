@@ -3,12 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { Observable, Subject, takeUntil } from 'rxjs';
 
-import { SnackBarService } from '../../shared/service/snackbar.service';
-import { ShoppingListsService } from '../shared/service/shopping-lists.service';
+import { SnackBarService } from '../../../shared/service/snackbar.service';
+import { ShoppingListsService } from '../../shared/service/shopping-lists.service';
 
-import { AddEditShoppingListComponent } from '../add-edit-shopping-list/add-edit-shopping-list.component';
+import { AddEditShoppingListComponent } from '../../components/add-edit-shopping-list/add-edit-shopping-list.component';
 
-import { ShoppingList } from '../shared/model/shopping-list.model';
+import { ShoppingList } from '../../shared/model/shopping-list.model';
 
 @Component({
   selector: 'app-shopping-lists-view',
