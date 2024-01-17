@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -15,6 +16,7 @@ import { SharedModule } from '@shared';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     CoreModule,
     BrowserAnimationsModule,
     AppRoutingModule,

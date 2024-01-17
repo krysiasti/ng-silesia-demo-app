@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +17,6 @@ import { HighlightDirective } from './directives/highlight.directive';
 @NgModule({
   imports: [
     MatSnackBarModule,
-    HttpClientModule,
     ReactiveFormsModule,
     MatCardModule,
     MatButtonModule,
@@ -29,7 +27,6 @@ import { HighlightDirective } from './directives/highlight.directive';
   ],
   exports: [
     ErrorPageComponent,
-    HttpClientModule,
     ReactiveFormsModule,
     MatCardModule,
     MatButtonModule,
