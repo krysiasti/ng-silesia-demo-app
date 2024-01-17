@@ -9,7 +9,7 @@
     "test": "ng test",
     "build:stats": "ng build --stats-json",
     "analyze": "webpack-bundle-analyzer dist/ng-silesia-demo-app/stats.json",
-    "source": "source-map-explorer dist/ng-silesia-demo-app/**/*.js --json result.json",
+    "source": "source-map-explorer dist/ng-silesia-demo-app/**/*.js",
     "source:result": "source-map-explorer dist/ng-silesia-demo-app/**/*.js --json result.json",
     "server": "json-server db.json"
   },
